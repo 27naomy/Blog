@@ -1,0 +1,17 @@
+.detail-content {
+    display: flex;
+}
+
+.detail-image {
+    max-width: 350px;
+    margin-right: 10px;
+}
+
+.detail-infos {
+    display: grid;
+}
+
+.btn-back {
+    margin-left: 85%;
+    background-color: white;
+}

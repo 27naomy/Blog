@@ -1,0 +1,49 @@
+.article-content {
+    padding: 10px;
+}
+
+.article-title {
+    color: #0a0a36;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.article-image {
+    width: 200px;
+    height: 200px;
+}
+.article-price {
+    color: #0a0a36;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.btn-details,
+.block-remove {
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+
+.btn-remove {
+    display: inline-block;
+    line-height: 25px;
+    padding: 0 10px;
+    font-size: 15px;
+    color: #fff;
+    background: red;
+    margin-left: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+}
