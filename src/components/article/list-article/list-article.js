@@ -7,7 +7,7 @@ import "./list-article.css";
 function ListArticle(props) {
   const [articles, setArticles] = useState([])
 
-  useEffect(() => {
+  const fetchArticles = ()=> {
     axios.get('http://localhost:3001/articles')
     .then((response) => {
       console.log("La reponse :", response)
@@ -16,14 +16,10 @@ function ListArticle(props) {
     .catch((err) => {
       console.log(err);
     });
+  }
+  useEffect(() => {
+    fetchArticles();
   }, []);
-
-
-  
-
-  const removeArticle = (idArticle) => {
-    console.log("L'article a supprimer est : ", idArticle);
-  };
 
   return (
     <div>
@@ -35,11 +31,11 @@ function ListArticle(props) {
 
       <div className="articles list-one-article">
         {articles.map((article) => (
-          <div className="item" key={article.id}>
+          <div className="item" key={article.articleid}>
             <OneArticle
               article={article}
               detail={false}
-              removeArticle={removeArticle}
+              fetchArticles={fetchArticles}
             />
           </div>
         ))}

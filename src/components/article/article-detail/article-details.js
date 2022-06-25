@@ -9,20 +9,20 @@ function ArticleDetails(props) {
 
   useEffect(() => {
     let idArticle = props.match.params.id;
-    //TODO: remove it after
-    const pathImages = window.location.origin + "/images";
-    axios
-      .get("http://localhost:8080/details-produit/" + idArticle)
+    const url = `http://localhost:3001/articles/${idArticle}`
+
+    axios.get(url)
       .then((response) => {
         setArticle(response.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
 
   return (
     <>
+    {console.log('article: ', window.location.origin)}
       {article && (
         <div>
           <fieldset className="add-fieldset">
@@ -32,7 +32,7 @@ function ArticleDetails(props) {
                 <div className="detail-content">
                   <img
                     className="detail-image"
-                    src={article.image}
+                    src={`${window.location.origin}/images${article.image}`}
                     alt={article.titre}
                   />
                   <div className="detail-infos">
