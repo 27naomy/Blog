@@ -3,7 +3,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 import "./home.css";
 
-function Homer() {
+function Home() {
   return (
     <div>
       <h1>Bienvenus sur le site les Merveilles d'Orients</h1>
@@ -74,4 +74,4 @@ function Homer() {
   );
 }
 
-export default Homer;
+export default Home;

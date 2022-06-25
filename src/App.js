@@ -7,9 +7,10 @@ import ArticleDetails from "./components/article/article-details";
 import Contact from "./components/contact/contact";
 import SeConnecter from "./components/connexion/seConnecter";
 import SEnregistrer from "./components/compte/sEnregistrer";
+import Home from "./components/Home/home";
 
 import "./App.css";
-import Homer from "./components/article/Home/home";
+
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
       </nav>
       <div>
         <Switch>
-          <Route path="/home" component={Homer}></Route>
+          <Route path="/home" component={Home}></Route>
           <Route path="/contact" component={Contact}></Route>
           <Route path="/articles" component={ListArticle}></Route>
           <Route path="/addArticle" component={AddArticle}></Route>
