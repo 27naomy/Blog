@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 import ListCategorie from "./components/categorie/list-categorie";
-import ListArticle from "./components/article/list-article";
-import AddArticle from "./components/article/add-article";
-import ArticleDetails from "./components/article/article-details";
+import ListArticle from "./components/article/list-article/list-article";
+import AddArticle from "./components/article/add-article/add-article";
+import ArticleDetails from "./components/article/article-detail/article-details";
 import Contact from "./components/contact/contact";
 import SeConnecter from "./components/connexion/seConnecter";
 import SEnregistrer from "./components/compte/sEnregistrer";

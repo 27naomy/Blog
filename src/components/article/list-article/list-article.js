@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import OneArticle from "./one-article";
+import OneArticle from "../one-article/one-article";
 import { Link } from "react-router-dom";
 import "./list-article.css";
 
