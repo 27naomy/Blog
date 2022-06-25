@@ -4,23 +4,22 @@ import OneArticle from "../one-article/one-article";
 import { Link } from "react-router-dom";
 import "./list-article.css";
 
-const BASE_URL = 'http://localhost:3001/articles';
-
 function ListArticle(props) {
   const [articles, setArticles] = useState([])
 
-
-
   useEffect(() => {
-    axios.get(BASE_URL)
-      .then((response) => {
-        console.log("La reponse :", response)
-        setArticles(response.data)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [articles, setArticles]);
+    axios.get('http://localhost:3001/articles')
+    .then((response) => {
+      console.log("La reponse :", response)
+      setArticles(response.data)
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  }, []);
+
+
+  
 
   const removeArticle = (idArticle) => {
     console.log("L'article a supprimer est : ", idArticle);

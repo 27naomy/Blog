@@ -11,30 +11,6 @@ function ArticleDetails(props) {
     let idArticle = props.match.params.id;
     //TODO: remove it after
     const pathImages = window.location.origin + "/images";
-    setArticle({
-      id: 1,
-      image: pathImages + "/baghrirs.jpeg",
-      titre: "Les baghrirs",
-      description: "C'est des crepes marocainnes ....",
-      prix: 2.5,
-    });
-
-    setArticle({
-      id: 2,
-      image: pathImages + "/Harira.jpg",
-      titre: "La Harira",
-      description: "C'est une soupe marocainnes ....",
-      prix: 2.5,
-    });
-
-    setArticle({
-      id: 3,
-      image: pathImages + "/couscous.jpg",
-      titre: "Le Couscous",
-      description:
-        "C'est un plat marocain a base de semoule et de legume et de viande d'agneau ....",
-      prix: 2.5,
-    });
     axios
       .get("http://localhost:8080/details-produit/" + idArticle)
       .then((response) => {

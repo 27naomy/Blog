@@ -10,7 +10,7 @@ function OneArticle(props) {
       <div className="article-content">
         <img
           className="article-image"
-          src={`${pathImages}${props.article.imageurl}`}
+          src={`${pathImages}${props.article.image}`}
           alt={props.article.titre}
         />
         <span className="article-title"> {props.article.titre} </span>

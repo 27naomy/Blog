@@ -6,10 +6,10 @@ import axios from "axios";
 
 function AddArticle() {
   const { handleSubmit, register, errors } = useForm();
+  
   const onSubmit = (values) => {
     console.log("Vous etes entrain d'enregistrer l'aticle suivant: ", values);
-    axios
-      .post("http://localhost:9001/articles", values, {
+    axios.post('http://localhost:3001/articles', values, {
         "Content-Type": "application/json",
       })
       .then((res) => {
