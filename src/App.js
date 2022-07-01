@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 import ListCategorie from "./components/categorie/list-category/list-categorie";
+import AddCategorie from "./components/categorie/add-category/add-categorie";
 import ListArticle from "./components/article/list-article/list-article";
 import AddArticle from "./components/article/add-article/add-article";
 import ArticleDetails from "./components/article/article-detail/article-details";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/addArticle" component={AddArticle}></Route>
           <Route path="/articleDetails/:id" component={ArticleDetails}></Route>
           <Route path="/categories" component={ListCategorie}></Route>
+          <Route path="/addCategorie" component={AddCategorie}></Route>
           <Route path="/seConnecter" component={SeConnecter}></Route>
           <Route path="/enregistrer" component={SEnregistrer}></Route>
         </Switch>
