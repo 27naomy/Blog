@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import OneCategorie from "./one-categorie";
+import OneCategorie from "../one-category/one-categorie";
 
 function CategorieDetails(props) {
     const [categorie, setCategorie] = useState(null);

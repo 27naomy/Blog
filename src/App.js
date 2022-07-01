@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
-import ListCategorie from "./components/categorie/list-categorie";
+import ListCategorie from "./components/categorie/list-category/list-categorie";
 import ListArticle from "./components/article/list-article/list-article";
 import AddArticle from "./components/article/add-article/add-article";
 import ArticleDetails from "./components/article/article-detail/article-details";

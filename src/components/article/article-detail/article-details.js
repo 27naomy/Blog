@@ -13,7 +13,7 @@ function ArticleDetails(props) {
 
     axios.get(url)
       .then((response) => {
-        setArticle(response.data);
+        setArticle(response.data[0]);
       })
       .catch((err) => {
         console.log(err);
@@ -22,11 +22,10 @@ function ArticleDetails(props) {
 
   return (
     <>
-    {console.log('article: ', window.location.origin)}
       {article && (
         <div>
           <fieldset className="add-fieldset">
-            <legend>Fiche produit</legend>
+            <legend>Menu en detail:</legend>
             <div className="detail">
               <div className="article">
                 <div className="detail-content">

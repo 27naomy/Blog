@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import axios from 'axios';
-import OneCategorie from "./one-categorie";
+import OneCategorie from "../one-category/one-categorie";
 import {Link} from "react-router-dom";
 import './list-categorie.css';
 
