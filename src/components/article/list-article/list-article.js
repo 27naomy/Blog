@@ -17,6 +17,7 @@ function ListArticle(props) {
       console.log(err);
     });
   }
+  
   useEffect(() => {
     fetchArticles();
   }, []);

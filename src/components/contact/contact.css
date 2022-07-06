@@ -9,12 +9,17 @@ div#back {
 #contact {
   background: #dc3545;
   border-radius: 8%;
-  height: 352px;
-  width: 799px;
+  height: 430px;
+  width: 899px;
   padding: 50px;
   opacity: 0.83;
 }
 
 h2 {
   color: whitesmoke;
+}
+
+
+.label {
+  color: white;
 }
