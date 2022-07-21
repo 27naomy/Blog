@@ -25,7 +25,7 @@ function SeConnecter() {
 
   return (
     <div id="back">
-      <div id="contact" className="section layout_padding">
+      <div id="seConnecter" className="section layout_padding">
         <div className="container-fluid">
           <div className="col-md-6">
             <div className="heading">
@@ -59,7 +59,6 @@ function SeConnecter() {
                   </div>
                 </div>
 
-
                 <div className="row">
                   <div className="col-25">
                     <label htmlFor="" className="label">
@@ -85,7 +84,6 @@ function SeConnecter() {
                     </span>
                   </div>
                 </div>
-
                 
                 <button className="btn add-submit-btn col-75" type="submit">
                   Enregistrer
