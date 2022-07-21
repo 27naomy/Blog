@@ -6,12 +6,11 @@ import "./contact.css";
 
 function Contact() {
   const { handleSubmit, register, errors } = useForm();
-  const { contacts, setContacts } = useState([]);
+  const [contacts, setContacts ] = useState([]);
 
   const fetchContacts = ()=> {
     axios.get('http://localhost:3001/contacts')
     .then((response) => {
-      console.log("La reponse (fetchContacts) :", response.data)
       setContacts(response.data)
     })
     .catch((err) => {
@@ -22,7 +21,7 @@ function Contact() {
   useEffect(() => {
     fetchContacts();
   }, []);
-
+ 
   const onSubmit = (values) => {
     axios.post('http://localhost:3001/contacts', values, {
         "Content-Type": "application/json",
@@ -32,7 +31,7 @@ function Contact() {
           "Vous etes entrain d'enregistrer un nouveau contact: ",
           res.data
         );
-
+        fetchContacts();
       })
       .catch((err) => {
         console.log(err);
