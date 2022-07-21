@@ -8,14 +8,17 @@ function SeConnecter() {
   const { handleSubmit, register, errors } = useForm();
 
   const onSubmit = (values) => {
-    axios.post('http://localhost:3001/contacts', values, {
+    console.log("Values: ", values);
+    axios.post('http://localhost:3001/comptes/login', values, {
         "Content-Type": "application/json",
       })
       .then((res) => {
-        console.log(
-          "Vous etes entrain d'enregistrer un nouveau contact: ",
-          res.data
-        );
+        if(res.status === 200 && res.data.length > 0){
+          console.log("Vous etes connecté !", res);
+        }else{
+          console.log("Vous n'etes pas connecté !", res);
+        }
+        
       })
       .catch((err) => {
         console.log(err);
