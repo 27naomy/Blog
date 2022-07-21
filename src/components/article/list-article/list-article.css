@@ -9,7 +9,8 @@ label {
   margin: 0px 10px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"]  {
   line-height: 50px;
   background: #fafafa;
   -moz-border-radius: 5px;
