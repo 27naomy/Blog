@@ -22,7 +22,8 @@ function AddArticle() {
   };
 
   return (
-    <div>
+    <div id="back">
+    <div id="add-article">
       <fieldset className="add-fieldset">
         <legend>Add new article</legend>
         {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
@@ -124,6 +125,7 @@ function AddArticle() {
           </button>
         </form>
       </fieldset>
+    </div>
     </div>
   );
 }

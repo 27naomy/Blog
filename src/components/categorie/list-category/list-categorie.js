@@ -3,7 +3,6 @@ import axios from 'axios';
 import {Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import './list-categorie.css';
 
 function ListCategorie(props) {
     const [categories, setCategories] = useState([])

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import OneArticle from "../one-article/one-article";
 import { Link } from "react-router-dom";
-import "./list-article.css";
 
 function ListArticle(props) {
   const [articles, setArticles] = useState([])

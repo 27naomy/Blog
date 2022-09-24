@@ -27,6 +27,129 @@ li a:hover:not(.active) {
   font-size: 11px;
 }
 
+label {
+  font-size: 16px;
+  color: #555;
+  text-transform: capitalize;
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+input[type="text"],
+input[type="password"]  {
+  line-height: 35px;
+  background: #fafafa;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #666;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  min-width: 340px;
+}
+
+.btn {
+  display: inline-block;
+  line-height: 25px;
+  padding: 0 10px;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  font-size: 18px;
+  color: #fff;
+  background: #4272d7;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  margin-left: 15px;
+  border: 1px solid;
+  border-radius: 5px;
+  text-decoration: blink;
+}
+
+.fieldset-articles {
+  border: 1px black solid;
+  border-radius: 5px;
+}
+.fieldset-articles-title {
+  padding: 2px 10px;
+}
+.list-one-article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: 5px 50px;
+}
+
+.add-fieldset {
+  width: 60%;
+  margin: auto;
+}
+form.add {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .label {
-  color: black;
+  padding-top: 20px;
+}
+.row {
+  width: 100%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 10px;
+}
+
+.add-submit-btn,
+.btn-add {
+  float: right;
+}
+
+.paid-succes {
+  color: green;
+  text-align: center;
+}
+
+
+
+
+
+div#back {
+  background: url(https://res.cloudinary.com/serdy-m-dia-inc/image/upload/f_auto/fl_lossy/q_auto:eco/x_0,y_208,w_4000,h_2250,c_crop/w_1200,h_630,c_fill/v1532956750/foodlavie/prod/recettes/melange-depices-a-la-marocaine-1956e02e)
+    no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  padding: 50px;
+}
+#contact, 
+#sEnregistrer, 
+#seConnecter,
+#add-categorie,
+#add-article {
+  background: #FFA500;
+  border-radius: 8%;
+  height: 460px;
+  width: 899px;
+  padding: 50px;
+  opacity: 0.83;
+}
+
+#sEnregistrer{
+  height: 400px;
+}
+
+#seConnecter,
+#add-categorie {
+  height: 350px;
 }

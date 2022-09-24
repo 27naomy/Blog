@@ -46,7 +46,7 @@ function ArticleDetails(props) {
                     </span>
                   </div>
                 </div>
-                <div className="btn btn-back">
+                <div className="link-back">
                   {<Link to={"/articles"}>Retour</Link>}
                 </div>
               </div>

@@ -3,9 +3,6 @@ import { useForm } from "react-hook-form";
 import { Redirect } from 'react-router-dom';
 import axios from "axios";
 
-
-import "./seConnecter.css";
-
 function SeConnecter() {
   const { handleSubmit, register, errors } = useForm();
   const [isRedirect, setIsRedirect] = useState(false)

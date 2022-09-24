@@ -19,7 +19,8 @@ function AddCategorie() {
     }
 
     return (
-        <div>
+        <div id="back">
+        <div id="add-categorie">
             <fieldset className="add-fieldset">
                 <legend>Add new Categorie</legend>
                 <form className="add" onSubmit={handleSubmit(onSubmit)}>
@@ -67,6 +68,7 @@ function AddCategorie() {
                     <button className="btn add-submit-btn col-75" type="submit">Add Categorie</button>
                 </form>
             </fieldset>
+        </div>
         </div>
     );
 }

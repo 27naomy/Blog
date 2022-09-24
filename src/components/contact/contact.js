@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-import "./contact.css";
-
 function Contact() {
   const { handleSubmit, register, errors } = useForm();
   const [contacts, setContacts ] = useState([]);
