@@ -120,9 +120,14 @@ function AddArticle() {
               </p>
             </div>
           </div>
-          <button className="btn add-submit-btn col-75" type="submit">
-            Add article
-          </button>
+          <div className="row">
+            <div className="col-25"></div>
+            <div className="col-75">
+              <button className="btn add-submit-btn" type="submit">
+                Add article
+              </button>
+            </div>
+          </div>
         </form>
       </fieldset>
     </div>

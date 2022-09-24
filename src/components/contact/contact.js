@@ -172,9 +172,14 @@ function Contact() {
                       </p>
                     </div>
                   </div>
-                  <button className="btn add-submit-btn col-75" type="submit">
-                    Enregistrer
-                  </button>
+                  <div className="row">
+                      <div className="col-25"></div>
+                      <div className="col-75">
+                          <button className="btn add-submit-btn" type="submit">
+                              Enregistrer
+                          </button>
+                      </div>
+                  </div>
                 </form>
               </div>
             </div>

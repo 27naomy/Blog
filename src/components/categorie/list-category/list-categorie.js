@@ -38,7 +38,7 @@ function ListCategorie(props) {
     return (
         <div>
             <fieldset>
-               <Link className="btn btn-add" to="/addCategorie">New categorie</Link>
+               <Link className="btn btn-new" to="/addCategorie">New categorie</Link>
             </fieldset>
 
             <div className="categories list-one-categorie">
@@ -58,7 +58,7 @@ function ListCategorie(props) {
                             <td>{categorie.nom}</td>
                             <td>{categorie.libelle}</td>
                             <td>
-                            <button type="button" className="btn-danger" onClick={()=>removeCategorie(categorie.categorieid)}>
+                            <button type="button" className="btn btn-danger" onClick={()=>removeCategorie(categorie.categorieid)}>
                                 Supprimer
                             </button>
                             </td>

@@ -24,7 +24,7 @@ function ListArticle(props) {
   return (
     <div>
       <fieldset>
-        <Link className="btn btn-add" to="/addArticle">
+        <Link className="btn btn-new" to="/addArticle">
           New article
         </Link>
       </fieldset>

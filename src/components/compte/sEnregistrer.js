@@ -115,8 +115,9 @@ function SEnregistrer() {
                             </div>
     
                             <div className="row">
+                                <div className="col-25"></div>
                                 <div className="col-75">
-                                    <button className="btn add-submit-btn col-75" type="submit">
+                                    <button className="btn add-submit-btn" type="submit">
                                         Enregistrer
                                     </button>
                                 </div>

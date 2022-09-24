@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(rgb(3, 194, 3), rgb(2, 65, 2));
+  background: linear-gradient(#EC9F05, #FF4E00);
 }
 
 li {
@@ -61,19 +61,27 @@ input[type="password"]  {
   color: #fff;
   background: #4272d7;
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-  margin-left: 15px;
   border: 1px solid;
   border-radius: 5px;
   text-decoration: blink;
+  min-width: 340px;
 }
 
-.fieldset-articles {
-  border: 1px black solid;
-  border-radius: 5px;
+.btn-new {
+  background: forestgreen;
+  min-width: 150px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
 }
-.fieldset-articles-title {
-  padding: 2px 10px;
+
+.btn-danger {
+  background: red;
+  min-width: 150px;
+  font-size: 16px;
 }
+
+
 .list-one-article {
   display: flex;
   flex-wrap: wrap;
@@ -83,19 +91,7 @@ input[type="password"]  {
   margin: 5px 50px;
 }
 
-.add-fieldset {
-  width: 60%;
-  margin: auto;
-}
-form.add {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.label {
-  padding-top: 20px;
-}
 .row {
   width: 100%;
 }
@@ -109,20 +105,6 @@ form.add {
   width: 75%;
   margin-top: 10px;
 }
-
-.add-submit-btn,
-.btn-add {
-  float: right;
-}
-
-.paid-succes {
-  color: green;
-  text-align: center;
-}
-
-
-
-
 
 div#back {
   background: url(https://res.cloudinary.com/serdy-m-dia-inc/image/upload/f_auto/fl_lossy/q_auto:eco/x_0,y_208,w_4000,h_2250,c_crop/w_1200,h_630,c_fill/v1532956750/foodlavie/prod/recettes/melange-depices-a-la-marocaine-1956e02e)
