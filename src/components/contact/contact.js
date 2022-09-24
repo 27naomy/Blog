@@ -66,7 +66,7 @@ function Contact() {
 
             <div className="col-md-6">
               <div className="heading">
-                <h2>Contactez-nous !</h2>
+                <h2>Créer votre compte !</h2>
               </div>
               <div className="full margin_top_20">
                 <form  onSubmit={handleSubmit(onSubmit)}>
@@ -82,17 +82,17 @@ function Contact() {
                         name="nomComplet"
                         placeholder="nomComplet"
                         ref={register({
-                          required: "Required",
+                          required: "Nom est obligatoire",
                           pattern: {
                             minLength: 2,
                             maxLength: 100,
-                            message: "invalide nomComplet",
+                            message: "Invalide nom",
                           },
                         })}
                       />
-                      <span className="error">
+                      <p className="error">
                         {errors.nomComplet && errors.nomComplet.message}
-                      </span>
+                      </p>
                     </div>
                   </div>
 
@@ -108,17 +108,17 @@ function Contact() {
                         name="email"
                         placeholder="email"
                         ref={register({
-                          required: "Required",
+                          required: "Email est obligatoire",
                           pattern: {
                             minLength: 2,
                             maxLength: 100,
-                            message: "invalide email",
+                            message: "Invalide email",
                           },
                         })}
                       />
-                      <span className="error">
+                      <p className="error">
                         {errors.email && errors.email.message}
-                      </span>
+                      </p>
                     </div>
                   </div>
 
@@ -135,17 +135,17 @@ function Contact() {
                         name="tel"
                         placeholder="tel"
                         ref={register({
-                          required: "Required",
+                          required: "Téléphone est obligatoire",
                           pattern: {
                             minLength: 2,
                             maxLength: 100,
-                            message: "invalide tel",
+                            message: "Invalide tel",
                           },
                         })}
                       />
-                      <span className="error">
+                      <p className="error">
                         {errors.tel && errors.tel.message}
-                      </span>
+                      </p>
                     </div>
                   </div>
 
@@ -161,17 +161,17 @@ function Contact() {
                         name="message"
                         placeholder="message"
                         ref={register({
-                          required: "Required",
+                          required: "Message est obligatoire",
                           pattern: {
                             minLength: 2,
-                            maxLength: 100,
-                            message: "invalide message",
+                            maxLength: 500,
+                            message: "Invalide message",
                           },
                         })}
                       />
-                      <span className="error">
+                      <p className="error">
                         {errors.message && errors.message.message}
-                      </span>
+                      </p>
                     </div>
                   </div>
                   <button className="btn add-submit-btn col-75" type="submit">

@@ -40,7 +40,7 @@ function SeConnecter() {
           <div className="container-fluid">
             <div className="col-md-6">
               <div className="heading">
-                <h2>Contactez-nous !</h2>
+                <h2>Contactez-vous !</h2>
               </div>
               <div className="full margin_top_20">
                 <form  onSubmit={handleSubmit(onSubmit)}>
@@ -56,11 +56,11 @@ function SeConnecter() {
                         name="email"
                         placeholder="email"
                         ref={register({
-                          required: "Required",
+                          required: "Email est obligatoire",
                           pattern: {
                             minLength: 2,
                             maxLength: 100,
-                            message: "invalide email",
+                            message: "Invalide email",
                           },
                         })}
                       />
@@ -82,11 +82,11 @@ function SeConnecter() {
                         name="pwd"
                         placeholder="Mot de passe"
                         ref={register({
-                          required: "Required",
+                          required: "Mot de passe est obligatoire",
                           pattern: {
                             minLength: 2,
                             maxLength: 100,
-                            message: "invalide pwd",
+                            message: "Invalide mot de passe",
                           },
                         })}
                       />

@@ -35,7 +35,7 @@ function SEnregistrer() {
                 <div className="container-fluid">
                     <div>
                     <div className="heading">
-                        <h2>Enregistrerez-nous !</h2>
+                        <h2>Enregistrerez-vous !</h2>
                     </div>
                     <div className="full margin_top_20">
                         <form  onSubmit={handleSubmit(onSubmit)}>
@@ -51,17 +51,17 @@ function SEnregistrer() {
                                     name="nomComplet"
                                     placeholder="nomComplet"
                                     ref={register({
-                                    required: "Required",
+                                    required: "Nom est obligatoire",
                                     pattern: {
                                         minLength: 2,
                                         maxLength: 100,
-                                        message: "invalide nomComplet",
+                                        message: "Invalide nom",
                                     },
                                     })}
                                 />
-                                <span className="error">
+                                <p className="error">
                                     {errors.nomComplet && errors.nomComplet.message}
-                                </span>
+                                </p>
                                 </div>
                             </div>
     
@@ -77,17 +77,17 @@ function SEnregistrer() {
                                     name="email"
                                     placeholder="email"
                                     ref={register({
-                                    required: "Required",
+                                    required: "Email est obligatoire",
                                     pattern: {
                                         minLength: 2,
                                         maxLength: 100,
-                                        message: "invalide email",
+                                        message: "Invalide email",
                                     },
                                     })}
                                 />
-                                <span className="error">
+                                <p className="error">
                                     {errors.email && errors.email.message}
-                                </span>
+                                </p>
                                 </div>
                             </div>
                             <div className="row">
@@ -102,17 +102,17 @@ function SEnregistrer() {
                                     name="pwd"
                                     placeholder="Mot de passe"
                                     ref={register({
-                                        required: "Required",
+                                        required: "Mot de passe est obligatoire",
                                         pattern: {
                                         minLength: 2,
                                         maxLength: 100,
-                                        message: "invalide pwd",
+                                        message: "Invalide mot de passe",
                                         },
                                     })}
                                     />
-                                    <span className="error">
+                                    <p className="error">
                                     {errors.pwd && errors.pwd.message}
-                                    </span>
+                                    </p>
                                 </div>
                             </div>
     

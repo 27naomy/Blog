@@ -33,7 +33,7 @@ function AddCategorie() {
                                 name="nom" placeholder="nom"
 
                                 ref={register({
-                                    required: "Required",
+                                    required: "Nom de categorie est obligatoire",
                                     pattern: {
                                         minLength: 2,
                                         maxLength: 50,
@@ -41,7 +41,7 @@ function AddCategorie() {
                                     }
                                 })}
                             />
-                            <span className="error">{errors.nom && errors.nom.message}</span>
+                            <p className="error">{errors.nom && errors.nom.message}</p>
                         </div>
                     </div>
                     <div className="row">
@@ -53,7 +53,7 @@ function AddCategorie() {
                                 type="text"
                                 name="libelle" placeholder="libelle"
                                 ref={register({
-                                    required: "Required",
+                                    required: "Libelle de categorie est obligatoire",
                                     pattern: {
                                         minLength: 0,
                                         maxLength: 500,
@@ -61,7 +61,7 @@ function AddCategorie() {
                                     }
                                 })}
                             />
-                            <span className="error">{errors.libelle && errors.libelle.message}</span>
+                            <p className="error">{errors.libelle && errors.libelle.message}</p>
                         </div>
                     </div>
                     <button className="btn add-submit-btn col-75" type="submit">Add Categorie</button>
