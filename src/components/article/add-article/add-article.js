@@ -2,8 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-//https://www.youtube.com/watch?v=zT62eVxShsY
-
 function AddArticle() {
   const { handleSubmit, register, errors } = useForm();
   
@@ -41,7 +39,7 @@ function AddArticle() {
                 name="titre"
                 placeholder="titre"
                 ref={register({
-                  required: "Required",
+                  required: "Titre est obligatoire",
                   pattern: {
                     minLength: 2,
                     maxLength: 15,
@@ -49,9 +47,9 @@ function AddArticle() {
                   },
                 })}
               />
-              <span className="error">
+              <p className="error">
                 {errors.titre && errors.titre.message}
-              </span>
+              </p>
             </div>
           </div>
           <div className="row">
@@ -64,7 +62,7 @@ function AddArticle() {
                 name="description"
                 placeholder="Description"
                 ref={register({
-                  required: "Required",
+                  required: "Description est obligatoire",
                   pattern: {
                     minLength: 10,
                     maxLength: 100,
@@ -72,9 +70,9 @@ function AddArticle() {
                   },
                 })}
               />
-              <span className="error">
+              <p className="error">
                 {errors.description && errors.description.message}
-              </span>
+              </p>
             </div>
           </div>
           <div className="row">
@@ -87,16 +85,16 @@ function AddArticle() {
                 name="image"
                 placeholder="Image Url"
                 ref={register({
-                  required: "Required",
+                  required: "Image est obligatoire",
                   pattern: {
                     value: /([^\\"]+)/,
                     message: "invalide url image",
                   },
                 })}
               />
-              <span className="error">
+              <p className="error">
                 {errors.image && errors.image.message}
-              </span>
+              </p>
             </div>
           </div>
           <div className="row">
@@ -109,16 +107,16 @@ function AddArticle() {
                 name="prix"
                 placeholder="prix"
                 ref={register({
-                  required: "Required",
+                  required: "Prix est obligatoire",
                   pattern: {
                     value: /^\d*\.?\d*$/,
                     message: "invalide prix",
                   },
                 })}
               />
-              <span className="error">
+              <p className="error">
                 {errors.prix && errors.prix.message}
-              </span>
+              </p>
             </div>
           </div>
           <button className="btn add-submit-btn col-75" type="submit">

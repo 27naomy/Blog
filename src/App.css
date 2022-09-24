@@ -21,3 +21,12 @@ li a {
 li a:hover:not(.active) {
   background-color: #333;
 }
+
+.error {
+  color: red;
+  font-size: 11px;
+}
+
+.label {
+  color: black;
+}
