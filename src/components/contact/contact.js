@@ -2,6 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
+/**
+    Cette page permet prendre un contatct avec l'administrateur du site
+    ==> Elle propose un formulaire avec les champs: 
+        - NOM COMPLET, 
+        - EMAIL 
+        - TELEPHONE
+        - MESSAGE
+    ==> Elle propose la liste des demandes créés précedement.
+    ==> On envoi les données saisis au backend sur l'URL: http://localhost:3001/contacts
+
+    - Si les données sont valides et le backend arrive à créé la la demande de contact sur la BDD 
+        ==> Le backend envoi la demande créé et un STATUT=200 sinon null
+        ==> Le cas avec STATUT = 200 on fait on met à jour la liste des demande juste à coté.
+    - Sinon  on reste sur la page de création de demande et on affiche les messages d'erreurs.
+ */
+
 function Contact() {
   const { handleSubmit, register, errors } = useForm();
   const [contacts, setContacts ] = useState([]);

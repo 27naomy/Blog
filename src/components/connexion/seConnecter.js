@@ -3,6 +3,19 @@ import { useForm } from "react-hook-form";
 import { Redirect } from 'react-router-dom';
 import axios from "axios";
 
+/**
+    Cette page permet d'afficher le formulaire de connexion 
+    ==> Elle propose un formulaire avec les champs: 
+        - LOGIN
+        - PASSWORD
+    
+    ==> on envoi les données saisis au backend sur l'URL: http://localhost:3001/comptes/login
+    - Si le login et password saisis existenet sur la base de données 
+      ==> le backend envoi la personne avec c'est coordonnée et un STATUT=200 sinon null
+      ==> Le cas avec STATUT = 200 on fait une redirection vers la page /home (page prinicipale)
+    - Sinon  on reste sur la page de connexion et on affiche les messages d'erreurs.
+ */
+
 function SeConnecter() {
   const { handleSubmit, register, errors } = useForm();
   const [isRedirect, setIsRedirect] = useState(false)

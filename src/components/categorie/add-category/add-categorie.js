@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { Redirect } from 'react-router-dom';
+
+
+/**
+    Cette page permet d'afficher le formulaire de création d'une nouvelle catégorie des plats 
+    ==> Elle propose un formulaire avec les champs: 
+        - NOM
+        - LIBELLE
+
+    ==> on envoi les données saisis au backend sur l'URL: http://localhost:3001/categories
+    - Si les données sont valides et le backend arrive à créé la categorie sur la BDD 
+        ==> Le backend envoi la catzgorie créé et un STATUT=200 sinon null
+        ==> Le cas avec STATUT = 200 on fait une redirection vers la page /categories (pages des categories (liste))
+    - Sinon  on reste sur la page de création de la categorie et on affiche les messages d'erreurs.
+ */
 
 function AddCategorie() {
     const { handleSubmit, register, errors } = useForm();
+    const [isRedirect, setIsRedirect] = useState(false);
+
     const onSubmit = values => {
         axios.post(
                     "http://localhost:3001/categories", 
@@ -12,12 +29,17 @@ function AddCategorie() {
                 )
             .then(res => {
                 console.log("Vous etes entrain d'enregistrer la categorie suivante: ", res.data);
+                setIsRedirect(true);
             })
             .catch((err) => {
                 console.log(err);
+                setIsRedirect(false);
             });
     }
 
+if(isRedirect === true) {
+    return <Redirect to='/categories'/> 
+} else {
     return (
         <div id="back">
         <div id="add-categorie">
@@ -75,9 +97,10 @@ function AddCategorie() {
                     </div>
                 </form>
             </fieldset>
-        </div>
-        </div>
-    );
+            </div>
+            </div>
+        );
+    }
 }
 
 export default AddCategorie;

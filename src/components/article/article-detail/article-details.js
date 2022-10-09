@@ -4,6 +4,17 @@ import { Link } from "react-router-dom";
 
 import "./article-detail.css";
 
+/**
+    Cette page affiche le detail d'un plat séléctionnés sur la page des plat lors du click sur le boutton blue "DETAIL ..."
+    ==> Les informations sont récupérer depuis le backend sur l'URL: http://localhost:3001/articles/${idArticle}
+    ==> Elle propose les information suivante: 
+      - TITRE
+      - DESCRIPTION
+      - PRIX
+      - PHOTO DU PLAT
+    ==> Elle propose aussi un lien blue "RETOUR" pour revenir à la page qui liste les plats
+*/
+
 function ArticleDetails(props) {
   const [article, setArticle] = useState(null);
 

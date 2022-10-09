@@ -3,6 +3,20 @@ import { useForm } from "react-hook-form";
 import { Redirect } from 'react-router-dom';
 import axios from "axios";
 
+/**
+    Cette page permet d'afficher le formulaire de création d'un  nouveau compte utilisateur 
+    ==> Elle propose un formulaire avec les champs: 
+        - NOM COMPLET
+        - EMAIL
+        - PASSWORD
+
+    ==> on envoi les données saisis au backend sur l'URL: http://localhost:3001/comptes
+    - Si les données sont valides et le backend arrive à créé l'utilisateur sur la BDD 
+        ==> Le backend envoi l'utilisateur créé et un STATUT=200 sinon null
+        ==> Le cas avec STATUT = 200 on fait une redirection vers la page /home (page prinicipale)
+    - Sinon  on reste sur la page de création du compte et on affiche les messages d'erreurs.
+ */
+
 function SEnregistrer() {
     const { handleSubmit, register, errors } = useForm();
     const [isRedirect, setIsRedirect] = useState(false)

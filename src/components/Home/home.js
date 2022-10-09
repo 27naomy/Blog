@@ -2,6 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 
+/**
+    Cette page affiche un ensemble des plats Marocains, plus un mot de bienvenue.
+    Le menu est toujours present sur les pages ce qui permet de naviger entre les page du site.
+ */
+
 function Home() {
   return (
     <div>
